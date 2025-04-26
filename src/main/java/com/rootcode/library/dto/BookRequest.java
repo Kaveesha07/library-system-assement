@@ -6,8 +6,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class BookRequest {
-    private String title;
-    private String author;
-    private int publishedYear;
-    private int availableCopies;
+  private String title;
+  private String author;
+  private int publishedYear;
+  private int availableCopies;
 }

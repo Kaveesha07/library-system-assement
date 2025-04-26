@@ -12,15 +12,16 @@ import lombok.Data;
 @Data
 @Table(name = "book")
 public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    private String title;
-    private String author;
-    @Column(name = "published_year")
-    private int publishedYear;
-    @Column(name = "available_copies")
-    private int availableCopies;
+  private String title;
+  private String author;
 
+  @Column(name = "published_year")
+  private int publishedYear;
+
+  @Column(name = "available_copies")
+  private int availableCopies;
 }

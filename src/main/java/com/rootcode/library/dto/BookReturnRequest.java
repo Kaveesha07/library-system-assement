@@ -6,6 +6,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class BookReturnRequest {
-    private Long userId;
-    private Long bookId;
+  private Long userId;
+  private Long bookId;
 }

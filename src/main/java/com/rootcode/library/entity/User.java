@@ -14,13 +14,14 @@ import java.time.LocalDateTime;
 @Data
 @Table(name = "user")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    private String name;
-    private String email;
-    private String password;
-    @Column(name = "created_at")
-    private LocalDateTime createdAt = LocalDateTime.now();
+  private String name;
+  private String email;
+  private String password;
+
+  @Column(name = "created_at")
+  private LocalDateTime createdAt = LocalDateTime.now();
 }

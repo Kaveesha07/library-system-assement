@@ -6,8 +6,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class NewUserRequestDto {
-    private Long id;
-    private String name;
-    private String email;
-    private String password;
+  private Long id;
+  private String name;
+  private String email;
+  private String password;
 }
