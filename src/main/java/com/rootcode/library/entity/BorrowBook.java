@@ -12,6 +12,13 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 public class BorrowBook {
+
+    /**
+     * This class represents the BorrowBook entity, which is used to track the
+     * borrowing of books by users.
+     * One user can borrow multiple books, and one book can be borrowed by multiple user at different times.
+     */
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
