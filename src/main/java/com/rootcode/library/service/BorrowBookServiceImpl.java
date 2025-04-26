@@ -40,12 +40,12 @@ public class BorrowBookServiceImpl implements BorrowBookService {
       throw new IllegalArgumentException(getMessage(USER_NOT_FOUND));
     }
 
-    Optional<Book> bookOptional = bookService.getBookById(bookId);
-    if (bookOptional.isEmpty()) {
+    Optional<Book> existBook = bookService.getBookById(bookId);
+    if (existBook.isEmpty()) {
       throw new IllegalArgumentException(getMessage(INVALID_BOOK_ID) + bookId);
     }
 
-    Book book = bookOptional.get();
+    Book book = existBook.get();
     if (book.getAvailableCopies() <= 0) {
       throw new IllegalStateException(getMessage(BOOK_UNAVAILABLE_FOR_BORROW));
     }
@@ -70,12 +70,12 @@ public class BorrowBookServiceImpl implements BorrowBookService {
       throw new IllegalArgumentException(getMessage(USER_NOT_FOUND));
     }
 
-    Optional<Book> bookOptional = bookService.getBookById(bookId);
-    if (bookOptional.isEmpty()) {
+    Optional<Book> book = bookService.getBookById(bookId);
+    if (book.isEmpty()) {
       throw new IllegalArgumentException(getMessage(INVALID_BOOK_ID));
     }
 
-    Optional<BorrowBook> borrowBookOpt = borrowBookRepository.findByUserAndBookAndReturnDateIsNull(userId, bookId);
+    Optional<BorrowBook> borrowBookOpt = borrowBookRepository.findByUserAndBookAndReturnDateIsNull(user, book);
 
     if (borrowBookOpt.isEmpty()) {
       throw new IllegalStateException("No active borrow record found for this user and book.");

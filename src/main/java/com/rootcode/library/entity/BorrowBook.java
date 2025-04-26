@@ -24,9 +24,11 @@ public class BorrowBook {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @ManyToOne private User user;
+  @ManyToOne
+  private User user;
 
-  @ManyToOne private Book book;
+  @ManyToOne
+  private Book book;
 
   @Column(name = "borrow_date")
   private LocalDateTime borrowDate;
