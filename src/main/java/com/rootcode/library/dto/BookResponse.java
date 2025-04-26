@@ -1,9 +1,15 @@
 package com.rootcode.library.dto;
 
-public record BookResponse(
-        Long id,
-        String title,
-        String author,
-        int publishedYear,
-        int availableCopies
-) {}
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
+@Data
+@RequiredArgsConstructor
+public class BookResponse {
+    private Long id;
+    private String title;
+    private String author;
+    private int publishedYear;
+    private int availableCopies;
+}

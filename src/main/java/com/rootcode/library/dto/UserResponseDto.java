@@ -5,7 +5,8 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class BookReturnRequest {
-    private Long userId;
-    private Long bookId;
+public class UserResponseDto {
+    private Long id;
+    private String name;
+    private String email;
 }

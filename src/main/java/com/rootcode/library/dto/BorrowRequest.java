@@ -1,6 +1,13 @@
 package com.rootcode.library.dto;
 
-public record BorrowRequest(
-        Long userId,
-        Long bookId
-) {}
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+
+public class BorrowRequest {
+    private Long userId;
+    private Long bookId;
+}

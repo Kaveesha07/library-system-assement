@@ -1,9 +1,13 @@
 package com.rootcode.library.dto;
 
-public record NewUserRequestDto (
-        Long id,
-        String name,
-        String email,
-        String password) {
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+public class NewUserRequestDto {
+    private Long id;
+    private String name;
+    private String email;
+    private String password;
 }

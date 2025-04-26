@@ -1,8 +1,13 @@
 package com.rootcode.library.dto;
 
-public record BookRequest(
-        String title,
-        String author,
-        int publishedYear,
-        int availableCopies
-) {}
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class BookRequest {
+    private String title;
+    private String author;
+    private int publishedYear;
+    private int availableCopies;
+}
